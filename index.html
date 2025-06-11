@@ -391,15 +391,11 @@
         map.addLayer(layer_tum_n2_1);
         map.createPane('pane_googlemap_2');
         map.getPane('pane_googlemap_2').style.zIndex = 402;
-        var layer_googlemap_2 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
-            pane: 'pane_googlemap_2',
-            opacity: 1.0,
-            attribution: '',
-            minZoom: 1,
-            maxZoom: 28,
-            minNativeZoom: 0,
-            maxNativeZoom: 19
-        });
+        var layer_googlemap_2 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'
+});
+
         layer_googlemap_2;
         map.addLayer(layer_googlemap_2);
         function pop_amp_n2_3(feature, layer) {
