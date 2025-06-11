@@ -529,15 +529,10 @@
         map.addLayer(layer_amp_n2_2);
         map.createPane('pane_googlesatellite_3');
         map.getPane('pane_googlesatellite_3').style.zIndex = 403;
-        var layer_googlesatellite_3 = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
-            pane: 'pane_googlesatellite_3',
-            opacity: 1.0,
-            attribution: '',
-            minZoom: 1,
-            maxZoom: 28,
-            minNativeZoom: 0,
-            maxNativeZoom: 22
-        });
+        var layer_googlesatellite_3 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'
+});
         layer_googlesatellite_3;
         map.addLayer(layer_googlesatellite_3);
         function pop_place_4(feature, layer) {
