@@ -40,11 +40,11 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="data/Tambol_0.js"></script>
-        <script src="data/Amphoe_1.js"></script>
-        <script src="data/Provice_2.js"></script>
-        <script src="data/Publicoffice_3.js"></script>
-        <script src="data/Place_4.js"></script>
+        <script src="data/_1.js"></script>
+        <script src="data/_2.js"></script>
+        <script src="data/_3.js"></script>
+        <script src="data/_4.js"></script>
+        <script src="data/_5.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
@@ -101,7 +101,20 @@
             }
             map.setMaxBounds(map.getBounds());
         }
-        function pop_Tambol_0(feature, layer) {
+        map.createPane('pane_GoogleSatellite_0');
+        map.getPane('pane_GoogleSatellite_0').style.zIndex = 400;
+        var layer_GoogleSatellite_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleSatellite_0',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 22
+        });
+        layer_GoogleSatellite_0;
+        map.addLayer(layer_GoogleSatellite_0);
+        function pop__1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['ADM3_EN'] !== null ? autolinker.link(feature.properties['ADM3_EN'].toLocaleString()) : '') + '</td>\
@@ -177,9 +190,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Tambol_0_0() {
+        function style__1_0() {
             return {
-                pane: 'pane_Tambol_0',
+                pane: 'pane__1',
                 opacity: 1,
                 color: 'rgba(151,71,35,1.0)',
                 dashArray: '',
@@ -192,21 +205,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Tambol_0');
-        map.getPane('pane_Tambol_0').style.zIndex = 400;
-        map.getPane('pane_Tambol_0').style['mix-blend-mode'] = 'normal';
-        var layer_Tambol_0 = new L.geoJson(json_Tambol_0, {
+        map.createPane('pane__1');
+        map.getPane('pane__1').style.zIndex = 401;
+        map.getPane('pane__1').style['mix-blend-mode'] = 'normal';
+        var layer__1 = new L.geoJson(json__1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Tambol_0',
-            layerName: 'layer_Tambol_0',
-            pane: 'pane_Tambol_0',
-            onEachFeature: pop_Tambol_0,
-            style: style_Tambol_0_0,
+            dataVar: 'json__1',
+            layerName: 'layer__1',
+            pane: 'pane__1',
+            onEachFeature: pop__1,
+            style: style__1_0,
         });
-        bounds_group.addLayer(layer_Tambol_0);
-        map.addLayer(layer_Tambol_0);
-        function pop_Amphoe_1(feature, layer) {
+        bounds_group.addLayer(layer__1);
+        map.addLayer(layer__1);
+        function pop__2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Shape_Leng'] !== null ? autolinker.link(feature.properties['Shape_Leng'].toLocaleString()) : '') + '</td>\
@@ -282,9 +295,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Amphoe_1_0() {
+        function style__2_0() {
             return {
-                pane: 'pane_Amphoe_1',
+                pane: 'pane__2',
                 opacity: 1,
                 color: 'rgba(161,0,172,1.0)',
                 dashArray: '',
@@ -297,21 +310,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Amphoe_1');
-        map.getPane('pane_Amphoe_1').style.zIndex = 401;
-        map.getPane('pane_Amphoe_1').style['mix-blend-mode'] = 'normal';
-        var layer_Amphoe_1 = new L.geoJson(json_Amphoe_1, {
+        map.createPane('pane__2');
+        map.getPane('pane__2').style.zIndex = 402;
+        map.getPane('pane__2').style['mix-blend-mode'] = 'normal';
+        var layer__2 = new L.geoJson(json__2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Amphoe_1',
-            layerName: 'layer_Amphoe_1',
-            pane: 'pane_Amphoe_1',
-            onEachFeature: pop_Amphoe_1,
-            style: style_Amphoe_1_0,
+            dataVar: 'json__2',
+            layerName: 'layer__2',
+            pane: 'pane__2',
+            onEachFeature: pop__2,
+            style: style__2_0,
         });
-        bounds_group.addLayer(layer_Amphoe_1);
-        map.addLayer(layer_Amphoe_1);
-        function pop_Provice_2(feature, layer) {
+        bounds_group.addLayer(layer__2);
+        map.addLayer(layer__2);
+        function pop__3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Shape_Leng'] !== null ? autolinker.link(feature.properties['Shape_Leng'].toLocaleString()) : '') + '</td>\
@@ -355,9 +368,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Provice_2_0() {
+        function style__3_0() {
             return {
-                pane: 'pane_Provice_2',
+                pane: 'pane__3',
                 opacity: 1,
                 color: 'rgba(255,35,1,1.0)',
                 dashArray: '',
@@ -370,21 +383,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Provice_2');
-        map.getPane('pane_Provice_2').style.zIndex = 402;
-        map.getPane('pane_Provice_2').style['mix-blend-mode'] = 'normal';
-        var layer_Provice_2 = new L.geoJson(json_Provice_2, {
+        map.createPane('pane__3');
+        map.getPane('pane__3').style.zIndex = 403;
+        map.getPane('pane__3').style['mix-blend-mode'] = 'normal';
+        var layer__3 = new L.geoJson(json__3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Provice_2',
-            layerName: 'layer_Provice_2',
-            pane: 'pane_Provice_2',
-            onEachFeature: pop_Provice_2,
-            style: style_Provice_2_0,
+            dataVar: 'json__3',
+            layerName: 'layer__3',
+            pane: 'pane__3',
+            onEachFeature: pop__3,
+            style: style__3_0,
         });
-        bounds_group.addLayer(layer_Provice_2);
-        map.addLayer(layer_Provice_2);
-        function pop_Publicoffice_3(feature, layer) {
+        bounds_group.addLayer(layer__3);
+        map.addLayer(layer__3);
+        function pop__4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td class="visible-with-data" id="จังหวัด"colspan="2"><strong>จังหวัด</strong><br />' + (feature.properties['จังหวัด'] !== null ? autolinker.link(feature.properties['จังหวัด'].toLocaleString()) : '') + '</td>\
@@ -415,39 +428,39 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Publicoffice_3_0() {
+        function style__4_0() {
             return {
-                pane: 'pane_Publicoffice_3',
+                pane: 'pane__4',
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
-            iconUrl: 'markers/Publicoffice_3.svg',
-            iconSize: [17.48, 17.48]
+            iconUrl: 'markers/_4.svg',
+            iconSize: [17.479999999999997, 17.479999999999997]
         }),
                 interactive: true,
             }
         }
-        map.createPane('pane_Publicoffice_3');
-        map.getPane('pane_Publicoffice_3').style.zIndex = 403;
-        map.getPane('pane_Publicoffice_3').style['mix-blend-mode'] = 'normal';
-        var layer_Publicoffice_3 = new L.geoJson(json_Publicoffice_3, {
+        map.createPane('pane__4');
+        map.getPane('pane__4').style.zIndex = 404;
+        map.getPane('pane__4').style['mix-blend-mode'] = 'normal';
+        var layer__4 = new L.geoJson(json__4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Publicoffice_3',
-            layerName: 'layer_Publicoffice_3',
-            pane: 'pane_Publicoffice_3',
-            onEachFeature: pop_Publicoffice_3,
+            dataVar: 'json__4',
+            layerName: 'layer__4',
+            pane: 'pane__4',
+            onEachFeature: pop__4,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.marker(latlng, style_Publicoffice_3_0(feature));
+                return L.marker(latlng, style__4_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Publicoffice_3);
-        map.addLayer(layer_Publicoffice_3);
-        function pop_Place_4(feature, layer) {
+        bounds_group.addLayer(layer__4);
+        map.addLayer(layer__4);
+        function pop__5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['ชื่อสถานปร'] !== null ? autolinker.link(feature.properties['ชื่อสถานปร'].toLocaleString()) : '') + '</td>\
@@ -469,11 +482,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Place_4_0(feature) {
+        function style__5_0(feature) {
             switch(String(feature.properties['จังหวัด'])) {
                 case 'เชียงราย':
                     return {
-                pane: 'pane_Place_4',
+                pane: 'pane__5',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -490,7 +503,7 @@
                     break;
                 case 'น่าน':
                     return {
-                pane: 'pane_Place_4',
+                pane: 'pane__5',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -507,7 +520,7 @@
                     break;
                 case 'พะเยา':
                     return {
-                pane: 'pane_Place_4',
+                pane: 'pane__5',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -524,7 +537,7 @@
                     break;
                 case 'แพร่':
                     return {
-                pane: 'pane_Place_4',
+                pane: 'pane__5',
                 shape: 'diamond',
                 radius: 6.0,
                 opacity: 1,
@@ -541,26 +554,26 @@
                     break;
             }
         }
-        map.createPane('pane_Place_4');
-        map.getPane('pane_Place_4').style.zIndex = 404;
-        map.getPane('pane_Place_4').style['mix-blend-mode'] = 'normal';
-        var layer_Place_4 = new L.geoJson(json_Place_4, {
+        map.createPane('pane__5');
+        map.getPane('pane__5').style.zIndex = 405;
+        map.getPane('pane__5').style['mix-blend-mode'] = 'normal';
+        var layer__5 = new L.geoJson(json__5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Place_4',
-            layerName: 'layer_Place_4',
-            pane: 'pane_Place_4',
-            onEachFeature: pop_Place_4,
+            dataVar: 'json__5',
+            layerName: 'layer__5',
+            pane: 'pane__5',
+            onEachFeature: pop__5,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.shapeMarker(latlng, style_Place_4_0(feature));
+                return L.shapeMarker(latlng, style__5_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Place_4);
-        map.addLayer(layer_Place_4);
+        bounds_group.addLayer(layer__5);
+        map.addLayer(layer__5);
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
             position: 'topleft',
@@ -572,11 +585,12 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         var overlaysTree = [
-            {label: 'Place<br /><table><tr><td style="text-align: center;"><img src="legend/Place_4_ChiangRai0.png" /></td><td>Chiang Rai</td></tr><tr><td style="text-align: center;"><img src="legend/Place_4_Nan1.png" /></td><td>Nan</td></tr><tr><td style="text-align: center;"><img src="legend/Place_4_Phayao2.png" /></td><td>Phayao</td></tr><tr><td style="text-align: center;"><img src="legend/Place_4_Phere3.png" /></td><td>Phere</td></tr></table>', layer: layer_Place_4},
-            {label: '<img src="legend/Publicoffice_3.png" /> Public office', layer: layer_Publicoffice_3},
-            {label: '<img src="legend/Provice_2.png" /> Provice', layer: layer_Provice_2},
-            {label: '<img src="legend/Amphoe_1.png" /> Amphoe', layer: layer_Amphoe_1},
-            {label: '<img src="legend/Tambol_0.png" /> Tambol', layer: layer_Tambol_0},]
+            {label: 'สถานประกอบการ<br /><table><tr><td style="text-align: center;"><img src="legend/_5_เชยงราย0.png" /></td><td>เชียงราย</td></tr><tr><td style="text-align: center;"><img src="legend/_5_นาน1.png" /></td><td>น่าน</td></tr><tr><td style="text-align: center;"><img src="legend/_5_พะเยา2.png" /></td><td>พะเยา</td></tr><tr><td style="text-align: center;"><img src="legend/_5_แพร3.png" /></td><td>แพร่</td></tr></table>', layer: layer__5},
+            {label: '<img src="legend/_4.png" /> สถานที่ราชการ', layer: layer__4},
+            {label: '<img src="legend/_3.png" /> จังหวัด', layer: layer__3},
+            {label: '<img src="legend/_2.png" /> อำเภอ', layer: layer__2},
+            {label: '<img src="legend/_1.png" /> ตำบล', layer: layer__1},
+            {label: "Google Satellite ", layer: layer_GoogleSatellite_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
             //selectorBack: false,
@@ -589,13 +603,13 @@
         lay.addTo(map);
         map.on("zoomend", function(){
 
-                if (map.hasLayer(layer_Tambol_0)) {
+                if (map.hasLayer(layer__1)) {
                     if (map.getZoom() <= 12 && map.getZoom() >= 19) {
-                        layer_Tambol_0.eachLayer(function (layer) {
+                        layer__1.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
                     } else {
-                        layer_Tambol_0.eachLayer(function (layer) {
+                        layer__1.eachLayer(function (layer) {
                             layer.closeTooltip();
                         });
                     }
@@ -603,12 +617,12 @@
         });
         setBounds();
         var i = 0;
-        layer_Tambol_0.eachLayer(function(layer) {
+        layer__1.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['ADM2_TH'] !== null?String('<div style="color: #1e1e1e; font-size: 19pt; font-family: \'Angsana New\', sans-serif;">' + layer.feature.properties['ADM2_TH']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Tambol_0'});
+            layer.bindTooltip((layer.feature.properties['ADM2_TH'] !== null?String('<div style="color: #1e1e1e; font-size: 19pt; font-family: \'Angsana New\', sans-serif;">' + layer.feature.properties['ADM2_TH']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css__1'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -616,12 +630,12 @@
               i++;
         });
         var i = 0;
-        layer_Amphoe_1.eachLayer(function(layer) {
+        layer__2.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['ADM2_TH'] !== null?String('<div style="color: #323232; font-size: 13pt; font-family: \'Angsana New\', sans-serif;">' + layer.feature.properties['ADM2_TH']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Amphoe_1'});
+            layer.bindTooltip((layer.feature.properties['ADM2_TH'] !== null?String('<div style="color: #000000; font-size: 13pt; font-family: \'Angsana New\', sans-serif;">' + layer.feature.properties['ADM2_TH']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css__2'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -629,38 +643,38 @@
               i++;
         });
         var i = 0;
-        layer_Provice_2.eachLayer(function(layer) {
+        layer__3.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['ADM1_TH'] !== null?String('<div style="color: #323232; font-size: 14pt; font-family: \'Angsana New\', sans-serif;">' + layer.feature.properties['ADM1_TH']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Provice_2'});
+            layer.bindTooltip((layer.feature.properties['ADM1_TH'] !== null?String('<div style="color: #000000; font-size: 14pt; font-family: \'Angsana New\', sans-serif;">' + layer.feature.properties['ADM1_TH']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css__3'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-                if (map.hasLayer(layer_Tambol_0)) {
+                if (map.hasLayer(layer__1)) {
                     if (map.getZoom() <= 12 && map.getZoom() >= 19) {
-                        layer_Tambol_0.eachLayer(function (layer) {
+                        layer__1.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
                     } else {
-                        layer_Tambol_0.eachLayer(function (layer) {
+                        layer__1.eachLayer(function (layer) {
                             layer.closeTooltip();
                         });
                     }
                 }
-        resetLabels([layer_Tambol_0,layer_Amphoe_1,layer_Provice_2]);
+        resetLabels([layer__1,layer__2,layer__3]);
         map.on("zoomend", function(){
-            resetLabels([layer_Tambol_0,layer_Amphoe_1,layer_Provice_2]);
+            resetLabels([layer__1,layer__2,layer__3]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_Tambol_0,layer_Amphoe_1,layer_Provice_2]);
+            resetLabels([layer__1,layer__2,layer__3]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_Tambol_0,layer_Amphoe_1,layer_Provice_2]);
+            resetLabels([layer__1,layer__2,layer__3]);
         });
         </script>
     </body>
